@@ -9,11 +9,11 @@ body{
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
 }
 
 header{
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     grid-row: 1/2;
@@ -23,38 +23,19 @@ header{
     border-bottom: solid 0.3rem #563b8b;
 }
 
-#logo{
+.logo{
     display: flex;
     flex-direction: row-reverse;
-    margin-left: 1rem;
+    cursor: pointer;
+    width: 20rem;
 }
 
 #menu-toggle{
     display: none;
+    width: 20vw;
 }
 
-#title{
-    z-index: 1;
-}
-
-#logo img{
-    background-color: transparent;
-    margin-left: -2.5rem;
-    width: 5rem;
-}
-
-#titleOne{
-    font-size: 5rem;
-    margin-bottom: -1.5rem;
-    text-shadow: 0.2rem -0.2rem white;
-}
-
-#titleTwo{
-    font-size: 1.5rem;
-}
-
-header h1{
-    font-size: 3rem;
+footer h1{
     font-family: 'Open Sans';
     color: #563b8b;
 }
@@ -65,20 +46,90 @@ header a{
     font-size: 1.5rem;
 }
 
-header div img{
-    width: 10%;
+header #menu{
+    width: 1rem;
     display: flex;
     background-color: white;
-}
-
-header a:hover{
-    padding: 0.5rem;
-    display: flex;
-
 }
 
 header nav{
     width: 40rem;
     display: flex;
     justify-content: space-around;
+}
+
+footer{
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
+    font-family: 'Oswald';
+}
+
+.buttons{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .button{
+    background-color: #563b8b;
+    padding: 1rem;
+    color: white;
+    border: inset 0.3rem #a87dffa9; 
+    border-radius: 10rem;
+    font-family: 'Oswald';
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+footer nav{
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -3rem;
+}
+
+.buttons #tiktok{
+    width: 1.5rem;
+}
+
+#insta{
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+#footerLogo{
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footerLogo img{
+    width: 3rem;
+    margin: 1rem;
+}
+
+
+@media (max-width: 600px) {
+    header nav{
+        display: none;
+    }
+
+    #menu-toggle{
+        display: flex;
+        justify-content: center;
+    }
+    
+    footer nav{
+        width: 60vw;
+    }
+
+    footer .button{
+        padding: 0.5rem;
+    }
 }
